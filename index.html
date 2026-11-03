@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Fuchi</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20rx%3D%2244%22%20fill%3D%22%23ff1f8f%22/%3E%3Cg%20transform%3D%22translate%2822%2022%29%20scale%28.78%29%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2285%22%20fill%3D%22none%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%2212%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%280%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2810%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2820%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2830%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2840%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2850%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2860%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2870%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2880%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%2890%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28100%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28110%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28120%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28130%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28140%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28150%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28160%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28170%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28180%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28190%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28200%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28210%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28220%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28230%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28240%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28250%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28260%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28270%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28280%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28290%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28300%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28310%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28320%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28330%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28340%20100%20100%29%22/%3E%3Crect%20x%3D%2294.5%22%20y%3D%222%22%20width%3D%2211%22%20height%3D%2212%22%20rx%3D%221.5%22%20fill%3D%22%230a0a0a%22%20transform%3D%22rotate%28350%20100%20100%29%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2279%22%20fill%3D%22none%22%20stroke%3D%22%23ff1f8f%22%20stroke-width%3D%223%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2274%22%20fill%3D%22none%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%222.5%22/%3E%3Cline%20x1%3D%22124.0%22%20y1%3D%22100.0%22%20x2%3D%22167.7%22%20y2%3D%22127.3%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22123.2%22%20y1%3D%22106.2%22%20x2%3D%22172.5%22%20y2%3D%2291.1%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22120.8%22%20y1%3D%22112.0%22%20x2%3D%22144.9%22%20y2%3D%22157.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22117.0%22%20y1%3D%22117.0%22%20x2%3D%22167.2%22%20y2%3D%22128.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22112.0%22%20y1%3D%22120.8%22%20x2%3D%22110.2%22%20y2%3D%22172.3%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22106.2%22%20y1%3D%22123.2%22%20x2%3D%22143.9%22%20y2%3D%22158.3%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22100.0%22%20y1%3D%22124.0%22%20x2%3D%2272.7%22%20y2%3D%22167.7%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2293.8%22%20y1%3D%22123.2%22%20x2%3D%22108.9%22%20y2%3D%22172.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2288.0%22%20y1%3D%22120.8%22%20x2%3D%2242.5%22%20y2%3D%22144.9%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2283.0%22%20y1%3D%22117.0%22%20x2%3D%2271.5%22%20y2%3D%22167.2%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2279.2%22%20y1%3D%22112.0%22%20x2%3D%2227.7%22%20y2%3D%22110.2%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2276.8%22%20y1%3D%22106.2%22%20x2%3D%2241.7%22%20y2%3D%22143.9%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2276.0%22%20y1%3D%22100.0%22%20x2%3D%2232.3%22%20y2%3D%2272.7%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2276.8%22%20y1%3D%2293.8%22%20x2%3D%2227.5%22%20y2%3D%22108.9%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2279.2%22%20y1%3D%2288.0%22%20x2%3D%2255.1%22%20y2%3D%2242.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2283.0%22%20y1%3D%2283.0%22%20x2%3D%2232.8%22%20y2%3D%2271.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2288.0%22%20y1%3D%2279.2%22%20x2%3D%2289.8%22%20y2%3D%2227.7%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%2293.8%22%20y1%3D%2276.8%22%20x2%3D%2256.1%22%20y2%3D%2241.7%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22100.0%22%20y1%3D%2276.0%22%20x2%3D%22127.3%22%20y2%3D%2232.3%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22106.2%22%20y1%3D%2276.8%22%20x2%3D%2291.1%22%20y2%3D%2227.5%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22112.0%22%20y1%3D%2279.2%22%20x2%3D%22157.5%22%20y2%3D%2255.1%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22117.0%22%20y1%3D%2283.0%22%20x2%3D%22128.5%22%20y2%3D%2232.8%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22120.8%22%20y1%3D%2288.0%22%20x2%3D%22172.3%22%20y2%3D%2289.8%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Cline%20x1%3D%22123.2%22%20y1%3D%2293.8%22%20x2%3D%22158.3%22%20y2%3D%2256.1%22%20stroke%3D%22%230a0a0a%22%20stroke-width%3D%221.6%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2227%22%20fill%3D%22%230a0a0a%22/%3E%3Ccircle%20cx%3D%22119.0%22%20cy%3D%22100.0%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22116.5%22%20cy%3D%22109.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22109.5%22%20cy%3D%22116.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22100.0%22%20cy%3D%22119.0%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%2290.5%22%20cy%3D%22116.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%2283.5%22%20cy%3D%22109.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%2281.0%22%20cy%3D%22100.0%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%2283.5%22%20cy%3D%2290.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%2290.5%22%20cy%3D%2283.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22100.0%22%20cy%3D%2281.0%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22109.5%22%20cy%3D%2283.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22116.5%22%20cy%3D%2290.5%22%20r%3D%221.9%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%227%22%20fill%3D%22%23ff1f8f%22/%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%223%22%20fill%3D%22%230a0a0a%22/%3E%3C/g%3E%3C/svg%3E">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background:#0b0b0b radial-gradient(1100px 480px at 78% -8%, #2b2b2b, #0b0b0b 62%) no-repeat; }
+  input[type=checkbox] { accent-color:#ff1f8f; }
+  select:focus, input:focus, textarea:focus { outline:2px solid #ff1f8f; outline-offset:1px; }
+  .rueda { transition:transform .9s ease; } .rueda:hover { transform:rotate(360deg); }
+  @keyframes giro { to { transform:rotate(360deg); } } .girando { animation:giro 1.1s linear infinite; }
+  .leaflet-container { background:#e5e3df; border-radius:1rem; font-family: Arial, Helvetica, sans-serif; }
+  .hide-labels .loc-label { display:none; }
+  .loc-label { background:transparent; border:none; box-shadow:none; color:#4a4a4a; font-size:11px; font-weight:700; text-shadow:0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; }
+  .loc-label:before { display:none; }
+  .pin { background:transparent; border:none; } .pin svg { display:block; filter: drop-shadow(0 2px 2px rgba(0,0,0,.45)); }
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip { background:#1a1a1a; color:#fff; }
+  select, input, textarea { color-scheme: dark; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="rueda" viewBox="0 0 200 200"><circle cx="100" cy="100" r="85" fill="none" stroke="#0a0a0a" stroke-width="12"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(0 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(10 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(20 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(30 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(40 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(50 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(60 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(70 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(80 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(90 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(100 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(110 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(120 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(130 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(140 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(150 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(160 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(170 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(180 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(190 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(200 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(210 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(220 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(230 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(240 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(250 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(260 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(270 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(280 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(290 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(300 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(310 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(320 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(330 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(340 100 100)"/><rect x="94.5" y="2" width="11" height="12" rx="1.5" fill="#0a0a0a" transform="rotate(350 100 100)"/><circle cx="100" cy="100" r="79" fill="none" stroke="#ff1f8f" stroke-width="3"/><circle cx="100" cy="100" r="74" fill="none" stroke="#0a0a0a" stroke-width="2.5"/><line x1="124.0" y1="100.0" x2="167.7" y2="127.3" stroke="#0a0a0a" stroke-width="1.6"/><line x1="123.2" y1="106.2" x2="172.5" y2="91.1" stroke="#0a0a0a" stroke-width="1.6"/><line x1="120.8" y1="112.0" x2="144.9" y2="157.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="117.0" y1="117.0" x2="167.2" y2="128.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="112.0" y1="120.8" x2="110.2" y2="172.3" stroke="#0a0a0a" stroke-width="1.6"/><line x1="106.2" y1="123.2" x2="143.9" y2="158.3" stroke="#0a0a0a" stroke-width="1.6"/><line x1="100.0" y1="124.0" x2="72.7" y2="167.7" stroke="#0a0a0a" stroke-width="1.6"/><line x1="93.8" y1="123.2" x2="108.9" y2="172.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="88.0" y1="120.8" x2="42.5" y2="144.9" stroke="#0a0a0a" stroke-width="1.6"/><line x1="83.0" y1="117.0" x2="71.5" y2="167.2" stroke="#0a0a0a" stroke-width="1.6"/><line x1="79.2" y1="112.0" x2="27.7" y2="110.2" stroke="#0a0a0a" stroke-width="1.6"/><line x1="76.8" y1="106.2" x2="41.7" y2="143.9" stroke="#0a0a0a" stroke-width="1.6"/><line x1="76.0" y1="100.0" x2="32.3" y2="72.7" stroke="#0a0a0a" stroke-width="1.6"/><line x1="76.8" y1="93.8" x2="27.5" y2="108.9" stroke="#0a0a0a" stroke-width="1.6"/><line x1="79.2" y1="88.0" x2="55.1" y2="42.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="83.0" y1="83.0" x2="32.8" y2="71.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="88.0" y1="79.2" x2="89.8" y2="27.7" stroke="#0a0a0a" stroke-width="1.6"/><line x1="93.8" y1="76.8" x2="56.1" y2="41.7" stroke="#0a0a0a" stroke-width="1.6"/><line x1="100.0" y1="76.0" x2="127.3" y2="32.3" stroke="#0a0a0a" stroke-width="1.6"/><line x1="106.2" y1="76.8" x2="91.1" y2="27.5" stroke="#0a0a0a" stroke-width="1.6"/><line x1="112.0" y1="79.2" x2="157.5" y2="55.1" stroke="#0a0a0a" stroke-width="1.6"/><line x1="117.0" y1="83.0" x2="128.5" y2="32.8" stroke="#0a0a0a" stroke-width="1.6"/><line x1="120.8" y1="88.0" x2="172.3" y2="89.8" stroke="#0a0a0a" stroke-width="1.6"/><line x1="123.2" y1="93.8" x2="158.3" y2="56.1" stroke="#0a0a0a" stroke-width="1.6"/><circle cx="100" cy="100" r="27" fill="#0a0a0a"/><circle cx="119.0" cy="100.0" r="1.9" fill="#ff1f8f"/><circle cx="116.5" cy="109.5" r="1.9" fill="#ff1f8f"/><circle cx="109.5" cy="116.5" r="1.9" fill="#ff1f8f"/><circle cx="100.0" cy="119.0" r="1.9" fill="#ff1f8f"/><circle cx="90.5" cy="116.5" r="1.9" fill="#ff1f8f"/><circle cx="83.5" cy="109.5" r="1.9" fill="#ff1f8f"/><circle cx="81.0" cy="100.0" r="1.9" fill="#ff1f8f"/><circle cx="83.5" cy="90.5" r="1.9" fill="#ff1f8f"/><circle cx="90.5" cy="83.5" r="1.9" fill="#ff1f8f"/><circle cx="100.0" cy="81.0" r="1.9" fill="#ff1f8f"/><circle cx="109.5" cy="83.5" r="1.9" fill="#ff1f8f"/><circle cx="116.5" cy="90.5" r="1.9" fill="#ff1f8f"/><circle cx="100" cy="100" r="7" fill="#ff1f8f"/><circle cx="100" cy="100" r="3" fill="#0a0a0a"/></symbol></svg>
+<main class="min-h-screen text-white">
+  <div class="mx-auto max-w-7xl p-4 md:p-6">
+
+    <!-- Encabezado -->
+    <header class="mb-6 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#ff1f8f] p-1.5">
+          <svg class="rueda h-full w-full" role="img" aria-label="Rueda de moto"><use href="#rueda"/></svg>
+        </span>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[.25em] text-[#ff1f8f]">Equipo Fuchi</p>
+          <h1 class="text-3xl font-black italic uppercase leading-none tracking-tight">Radar <span class="text-[#ffd60a]">Fuchi</span></h1>
+          <p class="mt-1 text-sm text-white/50">Mapa de denuncias ciudadanas</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2 text-sm text-[#ffd60a]"><span class="h-2 w-2 rounded-full bg-[#ffd60a]"></span> Sistema activo</span>
+        <button id="btnNuevo" class="rounded-xl bg-[#ff1f8f] px-4 py-2 text-sm font-bold text-white hover:brightness-110">Nuevo reporte</button>
+      </div>
+    </header>
+
+    <section>
+      <div class="mb-6">
+        <h2 class="text-3xl font-bold tracking-tight">Panorama de Bogotá</h2>
+        <p class="mt-1 text-sm text-white/40">Visualización geográfica de denuncias y reportes ciudadanos en tiempo real.</p>
+      </div>
+
+      <div id="aviso" class="mb-4 hidden rounded-xl border border-[#ffd60a]/40 bg-[#ffd60a]/10 p-3 text-sm text-[#ffd60a]"></div>
+
+      <!-- Tarjetas -->
+      <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-sm text-white/50">Denuncias recibidas</p>
+          <p class="mt-2 text-3xl font-black">📍 <span id="stTotal">0</span></p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-sm text-white/50">Casos prioritarios</p>
+          <p class="mt-2 text-3xl font-black text-[#ff1f8f]">⚠️ <span id="stPrio">0</span></p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-sm text-white/50">Casos atendidos</p>
+          <p class="mt-2 text-3xl font-black text-[#34d399]">✓ <span id="stAtend">0</span></p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-sm text-white/50">Localidades activas</p>
+          <p class="mt-2 text-3xl font-black text-[#ffd60a]">🏙️ <span id="stLoc">0</span></p>
+        </div>
+      </div>
+
+      <!-- Filtros | Mapa | Detalle -->
+      <div class="grid min-h-[650px] grid-cols-1 gap-5 xl:grid-cols-[250px_1fr_320px]">
+
+        <aside class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-xs uppercase tracking-widest text-white/40">Filtros</p>
+          <h3 class="mb-4 text-lg font-semibold">Explorador de informes</h3>
+
+          <label class="mb-1 block text-xs text-white/50">Localidad</label>
+          <select id="fLoc" class="mb-3 w-full rounded-lg border border-white/10 bg-[#1a1a1a] p-2 text-sm"></select>
+
+          <label class="mb-1 block text-xs text-white/50">Estado</label>
+          <select id="fEstado" class="mb-3 w-full rounded-lg border border-white/10 bg-[#1a1a1a] p-2 text-sm"></select>
+
+          <label class="mb-1 block text-xs text-white/50">Categoría</label>
+          <select id="fCat" class="mb-5 w-full rounded-lg border border-white/10 bg-[#1a1a1a] p-2 text-sm"></select>
+
+          <p class="mb-2 text-xs uppercase tracking-widest text-white/40">Capas</p>
+          <label class="mb-1 flex items-center gap-2 text-sm"><input type="checkbox" id="lReportes" checked> Denuncias ciudadanas</label>
+          <label class="mb-1 flex items-center gap-2 text-sm"><input type="checkbox" id="lComedores"> 📍 Puntos de interés</label>
+
+          <p class="mb-2 mt-5 text-xs uppercase tracking-widest text-white/40">Opciones del mapa</p>
+          <label class="mb-1 flex items-center gap-2 text-sm"><input type="checkbox" id="oLimites" checked> 🗺️ Límites de localidades</label>
+          <label class="mb-1 flex items-center gap-2 text-sm"><input type="checkbox" id="oNombres" checked> 🏷️ Nombres de localidades</label>
+
+          <p class="mb-2 mt-5 text-xs uppercase tracking-widest text-white/40">Leyenda</p>
+          <div id="leyenda" class="space-y-1 text-sm text-white/70"></div>
+        </aside>
+
+        <div class="relative min-h-[500px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111] p-2">
+          <div id="map" class="h-full min-h-[480px] w-full"></div>
+        </div>
+
+        <aside class="rounded-2xl border border-white/10 bg-[#111111] p-5">
+          <p class="text-xs uppercase tracking-widest text-white/40">Informe seleccionado</p>
+          <div id="detalle" class="mt-3 text-sm text-white/60">Cargando informes...</div>
+        </aside>
+      </div>
+
+      <!-- Actividad -->
+      <div class="mt-6 rounded-2xl border border-white/10 bg-[#111111] p-5">
+        <div class="mb-3 flex items-center justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-white/40">Actividad</p>
+            <h3 class="text-lg font-semibold">Informes recientes</h3>
+          </div>
+          <div class="flex items-center gap-4"><button id="btnActualizar" class="text-sm text-white/60 hover:text-white">↻ Actualizar</button><button id="verTodos" class="text-sm text-white/60 hover:text-white">Ver todos →</button></div>
+        </div>
+        <div id="recientes" class="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3"></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="localidades.js"></script>
+<script>
+/* ============ CONFIGURACIÓN ============ */
+const CONFIG = {
+  // Pega aquí la URL de tu script de Google (termina en /exec). Vacío = puntos de demostración.
+  API_URL:"https://script.google.com/macros/s/AKfycbzoTCUxksenEc13AEDY3zRJYxvNHwF-DKLbQWj7Z2Fb8Ru_-b_L2viNB0lnq2S4N-W9mw/exec",
+  // Enlace público de tu Google Form. El botón "Nuevo reporte" lo abre.
+  FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLSdQM67NjftVXdxeE6DdUbHl4vEkSMMZiS5zY_pLzv4-cZHDVw/viewform?usp=header",
+  // Cada cuántos segundos se actualiza solo el mapa.
+  ACTUALIZAR_CADA: 45,
+  // GeoJSON opcional de puntos de interés (propiedad "nombre").
+  PUNTOS_GEOJSON_URL: "",
+  CENTRO: [4.65, -74.1],
+  ZOOM: 12
+};
+
+const ESTADOS = ["Pendiente", "En revisión", "Atendida", "Prioritaria"];
+const COLOR = { "Pendiente": "#ffd60a", "En revisión": "#3b82f6", "Atendida": "#34d399", "Prioritaria": "#ff1f8f" };
+const CATEGORIAS = ["Huecos y vías", "Seguridad", "Movilidad y tránsito", "Motociclistas", "Espacio público", "Servicios públicos"];
+
+// Centros aproximados (para acercar el mapa y como respaldo si una dirección no se pudo ubicar)
+const LOCALIDADES = {
+  "Usaquén":[4.74,-74.03],"Chapinero":[4.65,-74.05],"Santa Fe":[4.60,-74.06],"San Cristóbal":[4.56,-74.08],
+  "Usme":[4.46,-74.12],"Tunjuelito":[4.57,-74.13],"Bosa":[4.61,-74.19],"Kennedy":[4.63,-74.15],
+  "Fontibón":[4.68,-74.15],"Engativá":[4.70,-74.11],"Suba":[4.75,-74.09],"Barrios Unidos":[4.67,-74.08],
+  "Teusaquillo":[4.64,-74.09],"Los Mártires":[4.61,-74.09],"Antonio Nariño":[4.59,-74.10],
+  "Puente Aranda":[4.62,-74.11],"La Candelaria":[4.595,-74.075],"Rafael Uribe Uribe":[4.57,-74.11],
+  "Ciudad Bolívar":[4.51,-74.15],"Sumapaz":[4.20,-74.25]
+};
+
+// Datos de DEMOSTRACIÓN (ficticios)
+const DEMO = [
+  {fecha:"2026-10-20",localidad:"Kennedy",barrio:"Barrio demo 1",categoria:"Huecos y vías",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.628,lng:-74.152},
+  {fecha:"2026-10-19",localidad:"Ciudad Bolívar",barrio:"Barrio demo 2",categoria:"Seguridad",estado:"En revisión",descripcion:"Reporte de demostración.",lat:4.515,lng:-74.150},
+  {fecha:"2026-10-18",localidad:"Suba",barrio:"Barrio demo 3",categoria:"Movilidad y tránsito",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.745,lng:-74.092},
+  {fecha:"2026-10-17",localidad:"Bosa",barrio:"Barrio demo 4",categoria:"Motociclistas",estado:"Atendida",descripcion:"Reporte de demostración.",lat:4.612,lng:-74.188},
+  {fecha:"2026-10-16",localidad:"Usme",barrio:"Barrio demo 5",categoria:"Espacio público",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.463,lng:-74.118},
+  {fecha:"2026-10-15",localidad:"Engativá",barrio:"Barrio demo 6",categoria:"Servicios públicos",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.700,lng:-74.110}
+];
+
+/* ============ UTILIDADES ============ */
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
+const num = s => parseFloat(String(s ?? "").replace(",", "."));
+const oficial = l => Object.keys(LOCALIDADES).find(k => norm(k) === norm(l) || norm(k) === "la " + norm(l)) || String(l || "").trim();
+// Si una dirección no se pudo ubicar, el punto cae cerca del centro de su localidad (aproximado)
+function aproximada(localidad, n) {
+  const c = LOCALIDADES[localidad]; if (!c) return null;
+  const a = Math.sin(n * 12.9898) * 43758.5453, b = Math.sin(n * 78.233) * 12345.6789;
+  return { lat: c[0] + ((a - Math.floor(a)) - .5) * .014, lng: c[1] + ((b - Math.floor(b)) - .5) * .014 };
+}
+function mostrarAviso(texto) {
+  const el = $("aviso"); el.textContent = texto || ""; el.classList.toggle("hidden", !texto);
+}
+
+/* ============ DATOS: script de Google ============ */
+const AYUDA_URL = 'Revisa que la implementación diga "Quién tiene acceso: Cualquier persona" y que la URL termine en /exec.';
+function jsonp(url) {
+  return new Promise((ok, fallo) => {
+    const cb = "radar_cb_" + Date.now() + "_" + Math.floor(Math.random() * 1e6);
+    const s = document.createElement("script");
+    const limpiar = () => { clearTimeout(t); delete window[cb]; s.remove(); };
+    const t = setTimeout(() => { limpiar(); fallo(new Error("el script de Google no respondió. " + AYUDA_URL)); }, 15000);
+    window[cb] = d => { limpiar(); ok(d); };
+    s.onerror = () => { limpiar(); fallo(new Error("no se pudo abrir la URL del script. " + AYUDA_URL)); };
+    s.src = url + "&callback=" + cb;
+    document.head.appendChild(s);
+  });
+}
+async function pedirAPI() {
+  const url = CONFIG.API_URL + (CONFIG.API_URL.includes("?") ? "&" : "?") + "t=" + Date.now();
+  let datos;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    datos = await r.json();
+  } catch (e) {
+    datos = await jsonp(url);         // respaldo si el navegador bloquea fetch
+  }
+  if (!datos || datos.ok === false) throw new Error(datos && datos.error ? datos.error : "respuesta inesperada del script");
+  return datos.reportes || [];
+}
+function adaptar(r, n) {
+  const localidad = oficial(r.localidad);
+  let lat = num(r.lat), lng = num(r.lng), aprox = !!r.aprox;
+  if (isNaN(lat) || isNaN(lng)) {
+    const p = aproximada(localidad, n + 1);
+    if (!p) return null;
+    lat = p.lat; lng = p.lng; aprox = true;
+  }
+  const estado = ESTADOS.find(e => norm(e) === norm(r.estado)) || "Pendiente";
+  return {
+    fecha: String(r.fecha || ""), localidad, barrio: r.barrio || "", categoria: r.categoria || "Otro", estado,
+    descripcion: (r.descripcion || "") + (aprox ? " (ubicación aproximada)" : ""), lat, lng
+  };
+}
+async function cargarReportes() {
+  if (!CONFIG.API_URL) return DEMO.map((r, n) => adaptar(r, n)).filter(Boolean);
+  return (await pedirAPI()).map(adaptar).filter(Boolean);
+}
+
+/* ============ MAPA ============ */
+let reportes = [], seleccion = null;
+const map = L.map("map", { zoomControl: true }).setView(CONFIG.CENTRO, CONFIG.ZOOM);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+  maxZoom: 19
+}).addTo(map);
+const capaReportes = L.layerGroup().addTo(map);
+const capaPuntos = L.layerGroup();
+const capaLimites = L.layerGroup().addTo(map);
+const capaNombres = L.layerGroup().addTo(map);
+
+function pin(color) {
+  return L.divIcon({
+    className: "pin", iconSize: [28, 38], iconAnchor: [14, 36], tooltipAnchor: [0, -30],
+    html: `<svg width="28" height="38" viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg"><path d="M14 1C7 1 1.5 6.4 1.5 13.2 1.5 22.6 14 37 14 37s12.5-14.4 12.5-23.8C26.5 6.4 21 1 14 1z" fill="${color}" stroke="#111" stroke-width="1.6"/><circle cx="14" cy="13.5" r="5" fill="#fff"/></svg>`
+  });
+}
+
+/* ============ FILTROS ============ */
+function llenarSelect(el, primera, items) {
+  el.innerHTML = `<option value="">${primera}</option>` + items.map(i => `<option>${esc(i)}</option>`).join("");
+}
+llenarSelect($("fLoc"), "Todas las localidades", Object.keys(LOCALIDADES));
+llenarSelect($("fEstado"), "Todos los estados", ESTADOS);
+llenarSelect($("fCat"), "Todas las categorías", CATEGORIAS);
+$("leyenda").innerHTML = ESTADOS.map(e => `<div class="flex items-center gap-2"><span class="h-3 w-3 rounded-full" style="background:${COLOR[e]}"></span>${e}</div>`).join("");
+
+function actualizarCategorias() {
+  if (!CONFIG.API_URL) return;
+  const actual = $("fCat").value;
+  const cats = [...new Set(reportes.map(x => x.categoria).filter(Boolean))].sort();
+  llenarSelect($("fCat"), "Todas las categorías", cats);
+  if (cats.includes(actual)) $("fCat").value = actual;
+}
+function filtrados() {
+  const l = $("fLoc").value, e = $("fEstado").value, c = $("fCat").value;
+  return reportes.filter(r => (!l || r.localidad === l) && (!e || r.estado === e) && (!c || r.categoria === c));
+}
+
+/* ============ RENDER ============ */
+function render() {
+  const lista = filtrados();
+  $("stTotal").textContent = lista.length;
+  $("stPrio").textContent = lista.filter(r => r.estado === "Prioritaria").length;
+  $("stAtend").textContent = lista.filter(r => r.estado === "Atendida").length;
+  $("stLoc").textContent = new Set(lista.map(r => r.localidad)).size;
+
+  capaReportes.clearLayers();
+  lista.forEach(r => {
+    const m = L.marker([r.lat, r.lng], { icon: pin(COLOR[r.estado] || "#999") });
+    m.bindTooltip(`${esc(r.categoria)} · ${esc(r.localidad)}`);
+    m.on("click", () => seleccionar(r));
+    m.addTo(capaReportes);
+  });
+
+  const rec = [...lista].sort((a, b) => String(b.fecha).localeCompare(String(a.fecha))).slice(0, 6);
+  $("recientes").innerHTML = rec.length ? rec.map((r, i) => `
+    <button data-i="${i}" class="rounded-xl border border-white/10 bg-[#1a1a1a] p-4 text-left hover:border-white/30">
+      <div class="mb-1 flex items-center gap-2 text-xs text-white/50"><span class="h-2 w-2 rounded-full" style="background:${COLOR[r.estado]}"></span>${esc(r.estado)} · ${esc(String(r.fecha).slice(0, 16))}</div>
+      <div class="text-sm font-semibold">${esc(r.categoria)}</div>
+      <div class="text-xs text-white/50">${esc(r.localidad)} · ${esc(r.barrio)}</div>
+    </button>`).join("") : `<p class="text-sm text-white/50">Sin informes con estos filtros.</p>`;
+  $("recientes").querySelectorAll("button").forEach(b => b.onclick = () => {
+    const r = rec[+b.dataset.i]; seleccionar(r); map.flyTo([r.lat, r.lng], 15);
+  });
+
+  if (!lista.length) { seleccion = null; $("detalle").textContent = "No hay informes con estos filtros."; }
+  else if (!seleccion || !lista.includes(seleccion)) $("detalle").textContent = "Haz clic en un pin del mapa para ver el detalle.";
+}
+
+function seleccionar(r) {
+  seleccion = r;
+  const pasos = ["Pendiente", "En revisión", "Atendida"];
+  const nivel = r.estado === "Atendida" ? 3 : r.estado === "En revisión" || r.estado === "Prioritaria" ? 2 : 1;
+  $("detalle").innerHTML = `
+    <div class="mb-1 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold" style="background:${COLOR[r.estado]}22;color:${COLOR[r.estado]}">${esc(r.estado)}</div>
+    <h4 class="mt-2 text-base font-semibold text-white">${esc(r.categoria)}</h4>
+    <p class="text-xs text-white/50">${esc(r.localidad)} · ${esc(r.barrio)} · ${esc(String(r.fecha).slice(0, 16))}</p>
+    <p class="mt-3 text-xs uppercase tracking-widest text-white/40">Descripción</p>
+    <p class="text-sm text-white/80">${esc(r.descripcion) || "Sin descripción disponible."}</p>
+    <p class="mt-4 text-xs uppercase tracking-widest text-white/40">Seguimiento</p>
+    <ul class="mt-2 space-y-2 text-sm">
+      ${pasos.map((p, i) => `<li class="flex items-center gap-2 ${i < nivel ? "text-white" : "text-white/30"}">${i < nivel ? "✓" : "•"} ${p}</li>`).join("")}
+    </ul>`;
+}
+
+/* ============ CAPAS Y OPCIONES ============ */
+$("lReportes").onchange = e => e.target.checked ? capaReportes.addTo(map) : map.removeLayer(capaReportes);
+$("lComedores").onchange = e => e.target.checked ? capaPuntos.addTo(map) : map.removeLayer(capaPuntos);
+$("oLimites").onchange = e => e.target.checked ? capaLimites.addTo(map) : map.removeLayer(capaLimites);
+$("oNombres").onchange = e => e.target.checked ? capaNombres.addTo(map) : map.removeLayer(capaNombres);
+["fLoc", "fEstado", "fCat"].forEach(id => $(id).onchange = () => {
+  render();
+  if (id === "fLoc") { const c = LOCALIDADES[$("fLoc").value]; c ? map.flyTo(c, 13) : map.flyTo(CONFIG.CENTRO, CONFIG.ZOOM); }
+});
+$("verTodos").onclick = () => { ["fLoc", "fEstado", "fCat"].forEach(id => $(id).value = ""); render(); map.flyTo(CONFIG.CENTRO, CONFIG.ZOOM); };
+$("btnActualizar").onclick = () => recargar(false);
+$("btnNuevo").onclick = () => {
+  if (CONFIG.FORM_URL) window.open(CONFIG.FORM_URL, "_blank", "noopener");
+  else mostrarAviso("Falta pegar el enlace de tu formulario en CONFIG.FORM_URL.");
+};
+
+Object.entries(LOCALIDADES).forEach(([n, c]) => {
+  L.marker(c, { opacity: 0, interactive: false })
+    .bindTooltip(n, { permanent: true, direction: "center", className: "loc-label" })
+    .addTo(capaNombres);
+});
+
+async function cargarGeoJSON(url, fn) {
+  if (!url) return;
+  try { const r = await fetch(url); fn(await r.json()); } catch (e) { console.warn("GeoJSON no cargó:", url, e); }
+}
+const pintarLimites = gj => {
+  capaNombres.clearLayers();
+  gj.features.forEach(f => {
+    const n = f.properties && f.properties.nombre; if (!n) return;
+    L.marker(L.geoJSON(f).getBounds().getCenter(), { opacity: 0, interactive: false })
+      .bindTooltip(esc(n), { permanent: true, direction: "center", className: "loc-label" }).addTo(capaNombres);
+  });
+  return L.geoJSON(gj, {
+    style: { color: "#ff1f8f", weight: 1.5, opacity: .75, fillColor: "#ff1f8f", fillOpacity: .04 },
+    onEachFeature: (f, l) => { const n = f.properties && f.properties.nombre; if (n) l.bindTooltip(esc(n), { sticky: true }); }
+  }).addTo(capaLimites);
+};
+if (window.LOCALIDADES_INLINE) pintarLimites(window.LOCALIDADES_INLINE);   // viene de localidades.js
+const ajustarEtiquetas = () => $("map").classList.toggle("hide-labels", map.getZoom() < 12);
+map.on("zoomend", ajustarEtiquetas); ajustarEtiquetas();
+cargarGeoJSON(CONFIG.PUNTOS_GEOJSON_URL, gj =>
+  L.geoJSON(gj, {
+    pointToLayer: (f, ll) => L.marker(ll, { icon: L.divIcon({ html: "🏍️", className: "", iconSize: [20, 20] }) }),
+    onEachFeature: (f, l) => l.bindPopup(esc(f.properties?.nombre || "Punto de interés"))
+  }).addTo(capaPuntos));
+
+/* ============ CARGA Y ACTUALIZACIÓN ============ */
+async function recargar(silencioso) {
+  try {
+    const nuevos = await cargarReportes();
+    const previo = seleccion;
+    reportes = nuevos;
+    actualizarCategorias();
+    render();
+    if (previo) {
+      const igual = reportes.find(x => x.fecha === previo.fecha && x.lat === previo.lat && x.lng === previo.lng);
+      if (igual) seleccionar(igual);
+    }
+    mostrarAviso(CONFIG.API_URL ? "" : "Modo demostración: estos puntos son de ejemplo. Pega la URL de tu script en CONFIG.API_URL para ver las denuncias reales.");
+  } catch (err) {
+    const txt = "No se pudieron cargar los informes: " + err.message;
+    mostrarAviso(txt);
+    if (!reportes.length) $("detalle").textContent = txt;
+  }
+}
+recargar(false);
+if (CONFIG.API_URL) setInterval(() => { if (!document.hidden) recargar(true); }, CONFIG.ACTUALIZAR_CADA * 1000);
+</script>
+</body>
+</html>
