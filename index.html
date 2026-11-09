@@ -132,7 +132,7 @@
 /* ============ CONFIGURACIÓN ============ */
 const CONFIG = {
   // Pega aquí la URL de tu script de Google (termina en /exec). Vacío = puntos de demostración.
-  API_URL:"https://script.google.com/macros/s/AKfycbzoTCUxksenEc13AEDY3zRJYxvNHwF-DKLbQWj7Z2Fb8Ru_-b_L2viNB0lnq2S4N-W9mw/exec",
+  API_URL: "https://script.google.com/macros/s/AKfycbzoTCUxksenEc13AEDY3zRJYxvNHwF-DKLbQWj7Z2Fb8Ru_-b_L2viNB0lnq2S4N-W9mw/exec",
   // Enlace público de tu Google Form. El botón "Nuevo reporte" lo abre.
   FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLSdQM67NjftVXdxeE6DdUbHl4vEkSMMZiS5zY_pLzv4-cZHDVw/viewform?usp=header",
   // Cada cuántos segundos se actualiza solo el mapa.
@@ -145,7 +145,17 @@ const CONFIG = {
 
 const ESTADOS = ["Pendiente", "En revisión", "Atendida", "Prioritaria"];
 const COLOR = { "Pendiente": "#ffd60a", "En revisión": "#3b82f6", "Atendida": "#34d399", "Prioritaria": "#ff1f8f" };
-const CATEGORIAS = ["Huecos y vías", "Seguridad", "Movilidad y tránsito", "Motociclistas", "Espacio público", "Servicios públicos"];
+const CATEGORIAS = ["Huecos o deterioro de las vías", "Vehículos mal parqueados", "Semáforos o señales de tránsito", "Basuras o escombros",
+  "Andenes o espacio público", "Parques o zonas verdes", "Transporte público", "Obras abandonadas", "Abuso de autoridad",
+  "Mal procedimiento de agentes", "Otros"];
+// Convierte lo que llega del formulario (con puntos, errores de tipeo o texto libre de "Otros") en una de las categorías de arriba
+function categoriaOficial(t) {
+  const x = norm(String(t || ""));
+  const reglas = [[/hueco|deterioro/, 0], [/vehicul|mal parquead/, 1], [/semaforo|senal/, 2], [/basura|escombro/, 3],
+    [/anden|espacio publico/, 4], [/parque|zona.* verde/, 5], [/transporte/, 6], [/obra/, 7], [/abuso/, 8], [/procedimiento|agente/, 9]];
+  for (const [re, i] of reglas) if (re.test(x)) return CATEGORIAS[i];
+  return "Otros";
+}
 
 // Centros aproximados (para acercar el mapa y como respaldo si una dirección no se pudo ubicar)
 const LOCALIDADES = {
@@ -159,12 +169,12 @@ const LOCALIDADES = {
 
 // Datos de DEMOSTRACIÓN (ficticios)
 const DEMO = [
-  {fecha:"2026-10-20",localidad:"Kennedy",barrio:"Barrio demo 1",categoria:"Huecos y vías",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.628,lng:-74.152},
-  {fecha:"2026-10-19",localidad:"Ciudad Bolívar",barrio:"Barrio demo 2",categoria:"Seguridad",estado:"En revisión",descripcion:"Reporte de demostración.",lat:4.515,lng:-74.150},
-  {fecha:"2026-10-18",localidad:"Suba",barrio:"Barrio demo 3",categoria:"Movilidad y tránsito",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.745,lng:-74.092},
-  {fecha:"2026-10-17",localidad:"Bosa",barrio:"Barrio demo 4",categoria:"Motociclistas",estado:"Atendida",descripcion:"Reporte de demostración.",lat:4.612,lng:-74.188},
-  {fecha:"2026-10-16",localidad:"Usme",barrio:"Barrio demo 5",categoria:"Espacio público",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.463,lng:-74.118},
-  {fecha:"2026-10-15",localidad:"Engativá",barrio:"Barrio demo 6",categoria:"Servicios públicos",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.700,lng:-74.110}
+  {fecha:"2026-10-20",localidad:"Kennedy",barrio:"Barrio demo 1",categoria:"Huecos",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.628,lng:-74.152},
+  {fecha:"2026-10-19",localidad:"Ciudad Bolívar",barrio:"Barrio demo 2",categoria:"Abusos de autoridad",estado:"En revisión",descripcion:"Reporte de demostración.",lat:4.515,lng:-74.150},
+  {fecha:"2026-10-18",localidad:"Suba",barrio:"Barrio demo 3",categoria:"Vías en mal estado",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.745,lng:-74.092},
+  {fecha:"2026-10-17",localidad:"Bosa",barrio:"Barrio demo 4",categoria:"Malos procedimientos de agentes",estado:"Atendida",descripcion:"Reporte de demostración.",lat:4.612,lng:-74.188},
+  {fecha:"2026-10-16",localidad:"Usme",barrio:"Barrio demo 5",categoria:"Parques dañados",estado:"Pendiente",descripcion:"Reporte de demostración.",lat:4.463,lng:-74.118},
+  {fecha:"2026-10-15",localidad:"Engativá",barrio:"Barrio demo 6",categoria:"Basuras",estado:"Prioritaria",descripcion:"Reporte de demostración.",lat:4.700,lng:-74.110}
 ];
 
 /* ============ UTILIDADES ============ */
@@ -220,8 +230,9 @@ function adaptar(r, n) {
   }
   const estado = ESTADOS.find(e => norm(e) === norm(r.estado)) || "Pendiente";
   return {
-    fecha: String(r.fecha || ""), localidad, barrio: r.barrio || "", categoria: r.categoria || "Otro", estado,
-    descripcion: (r.descripcion || "") + (aprox ? " (ubicación aproximada)" : ""), lat, lng
+    fecha: String(r.fecha || ""), localidad, barrio: r.barrio || "", categoria: categoriaOficial(r.categoria), estado,
+    descripcion: (r.descripcion || "") + (aprox ? " (ubicación aproximada)" : ""), lat, lng,
+    foto: /^https:\/\/(drive\.google\.com|lh3\.googleusercontent\.com)\//.test(r.foto || "") ? r.foto : ""
   };
 }
 async function cargarReportes() {
@@ -232,10 +243,24 @@ async function cargarReportes() {
 /* ============ MAPA ============ */
 let reportes = [], seleccion = null;
 const map = L.map("map", { zoomControl: true }).setView(CONFIG.CENTRO, CONFIG.ZOOM);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
-  maxZoom: 19
-}).addTo(map);
+const BASES = [
+  { url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>', maxZoom: 19 },
+  { url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, OpenStreetMap contributors", maxZoom: 19 }
+];
+let baseN = 0, fallos = 0, capaBase = null;
+function ponerBase() {
+  if (capaBase) map.removeLayer(capaBase);
+  const b = BASES[baseN];
+  capaBase = L.tileLayer(b.url, { attribution: b.attribution, maxZoom: b.maxZoom, subdomains: "abc" }).addTo(map);
+  capaBase.bringToBack();
+  fallos = 0;
+  capaBase.on("tileerror", () => {
+    if (++fallos >= 4 && baseN < BASES.length - 1) { baseN++; ponerBase(); }
+  });
+}
+ponerBase();
 const capaReportes = L.layerGroup().addTo(map);
 const capaPuntos = L.layerGroup();
 const capaLimites = L.layerGroup().addTo(map);
@@ -310,6 +335,11 @@ function seleccionar(r) {
     <p class="text-xs text-white/50">${esc(r.localidad)} · ${esc(r.barrio)} · ${esc(String(r.fecha).slice(0, 16))}</p>
     <p class="mt-3 text-xs uppercase tracking-widest text-white/40">Descripción</p>
     <p class="text-sm text-white/80">${esc(r.descripcion) || "Sin descripción disponible."}</p>
+    ${r.foto ? `<p class="mt-4 text-xs uppercase tracking-widest text-white/40">Foto</p>
+    <a href="${esc(r.foto.replace("thumbnail", "thumbnail").replace(/sz=w\d+/, "sz=w2000"))}" target="_blank" rel="noopener">
+      <img src="${esc(r.foto)}" alt="Foto del informe" loading="lazy" referrerpolicy="no-referrer"
+           class="mt-2 w-full rounded-xl border border-white/10 object-cover" style="max-height:260px"
+           onerror="this.parentNode.outerHTML='<p class=&quot;mt-2 text-xs text-white/40&quot;>La foto no se pudo cargar.</p>'"></a>` : ""}
     <p class="mt-4 text-xs uppercase tracking-widest text-white/40">Seguimiento</p>
     <ul class="mt-2 space-y-2 text-sm">
       ${pasos.map((p, i) => `<li class="flex items-center gap-2 ${i < nivel ? "text-white" : "text-white/30"}">${i < nivel ? "✓" : "•"} ${p}</li>`).join("")}
@@ -355,6 +385,7 @@ const pintarLimites = gj => {
   }).addTo(capaLimites);
 };
 if (window.LOCALIDADES_INLINE) pintarLimites(window.LOCALIDADES_INLINE);   // viene de localidades.js
+else console.warn("Falta localidades.js: súbelo a Netlify junto a index.html");
 const ajustarEtiquetas = () => $("map").classList.toggle("hide-labels", map.getZoom() < 12);
 map.on("zoomend", ajustarEtiquetas); ajustarEtiquetas();
 cargarGeoJSON(CONFIG.PUNTOS_GEOJSON_URL, gj =>
